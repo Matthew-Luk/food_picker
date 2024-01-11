@@ -1,0 +1,37 @@
+/* - FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* - SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
+$primary-font-size: 1.6rem;
+$primary-color: #bfd2c1;
+$secondary-color: #fff;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  font-size: $primary-font-size;
+  background-color: $primary-color;
+  height: 8rem;
+  padding-left: 3.2rem;
+  .navbarLeft {
+    display: flex;
+    align-items: center;
+    p {
+      color: $secondary-color;
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-left: 1.6rem;
+    }
+  }
+  button {
+    height: 3.2rem;
+    width: 6.4rem;
+    margin: 0 2.4rem 0 auto;
+  }
+}
+
+.header {
+  margin: 0 1.2rem;
+}
