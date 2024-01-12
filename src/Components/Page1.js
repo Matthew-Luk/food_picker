@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../scss/styles2.scss'
+import '../scss/styles.scss'
 
 const Page1 = () => {
   const navigate = useNavigate()
@@ -21,11 +21,11 @@ const Page1 = () => {
         <p>Do you have food at home?</p>
       </div>
       <div className='content'>
-        <div onClick={page1ClickYes} className='card'>
-          <p>Yes</p>
+        <div onClick={page1ClickYes} className='card homecooking'>
+          <p>YES</p>
         </div>
-        <div onClick={page1ClickNo} className='card'>
-          <p>No</p>
+        <div onClick={page1ClickNo} className='card takeout'>
+          <p>NO</p>
         </div>
       </div>
     </div>

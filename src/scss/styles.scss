@@ -4,9 +4,9 @@
 /* - SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
-$primary-font-size: 1.6rem;
 $primary-color: #bfd2c1;
 $secondary-color: #fff;
+$primary-font-size: 1.6rem;
 
 .navbar {
   display: flex;
@@ -32,6 +32,75 @@ $secondary-color: #fff;
   }
 }
 
-.header {
-  margin: 0 1.2rem;
+
+
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  font-size: 1.6rem;
+  .header {
+    margin-bottom: 1.2rem;
+  }
+  .content {
+    display: flex;
+    gap: 2.4rem;
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40rem;
+      height: 24rem;
+      font-size: 2.4rem;
+      font-weight: 600;
+      background-color: $primary-color;
+      color: $secondary-color;
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.75;
+      transition: all 0.4s;
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.resultPage {
+  display: flex;
+  justify-content: center;
+  .resultPageHeader {
+    display: flex;
+    font-size: 3.2rem;
+  }
+}
+
+.takeout {
+  background-image: url('../images/takeout.jpeg');
+}
+
+.homecooking {
+  background-image: url('../images/homecooking.jpeg');
+}
+
+.eggsAndRice {
+  background-image: url('../images/eggsandrice.jpeg');
+}
+
+.instantNoodles {
+  background-image: url('../images/instantnoodles.jpeg');
+}
+
+.blackFont {
+  color: black;
 }
