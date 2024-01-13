@@ -1,20 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
 /* - FONT SIZE SYSTEM (px)
 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
 
 /* - SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
+$primary-font: "PT Serif";
 $primary-color: #bfd2c1;
 $secondary-color: #fff;
 $primary-font-size: 1.6rem;
 
+
 .navbar {
   display: flex;
   align-items: center;
-  font-size: $primary-font-size;
   background-color: $primary-color;
   height: 8rem;
   padding-left: 3.2rem;
+  font-family: $primary-font;
+  font-size: $primary-font-size;
   .navbarLeft {
     display: flex;
     align-items: center;
@@ -27,8 +32,11 @@ $primary-font-size: 1.6rem;
   }
   button {
     height: 3.2rem;
-    width: 6.4rem;
+    width: 8rem;
     margin: 0 2.4rem 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
   }
 }
 
@@ -40,9 +48,11 @@ $primary-font-size: 1.6rem;
   align-items: center;
   height: 80vh;
   flex-direction: column;
+  font-family: $primary-font;
   font-size: 1.6rem;
   .header {
     margin-bottom: 1.2rem;
+    font-size: 3.2rem;
   }
   .content {
     display: flex;
@@ -78,10 +88,34 @@ $primary-font-size: 1.6rem;
 
 .resultPage {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  height: 80vh;
+  font-family: $primary-font;
   .resultPageHeader {
     display: flex;
     font-size: 3.2rem;
+  }
+  .resultPageContent {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.foodCard {
+  display: flex;
+  flex-direction: column;
+  border: 0.1rem solid $primary-color;
+  border-radius: 2.4rem;
+  height: 32rem;
+  img {
+    height: 20rem;
+    width: 26rem;
+    border-top-right-radius: 2.4rem;
+    border-top-left-radius: 2.4rem;
+    object-fit: cover;
   }
 }
 

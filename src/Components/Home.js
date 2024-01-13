@@ -1,14 +1,33 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Header from './Header'
-import Main from './Main'
+import { useNavigate } from 'react-router-dom'
+import '../scss/styles.scss'
 
 const Home = () => {
+  const navigate = useNavigate()
+
+  const page1ClickYes = (e) => {
+    e.preventDefault()
+    navigate('/page2')
+  }
+
+  const page1ClickNo = (e) => {
+    e.preventDefault()
+    navigate('/page3')
+  }
+
   return (
-    <div>
-      <Navbar/>
-      <Header/>
-      <Main/>
+    <div className='page'>
+      <div className='header'>
+        <p>Do you have food at home?</p>
+      </div>
+      <div className='content'>
+        <div onClick={page1ClickYes} className='card homecooking'>
+          <p>YES</p>
+        </div>
+        <div onClick={page1ClickNo} className='card takeout'>
+          <p>NO</p>
+        </div>
+      </div>
     </div>
   )
 }
