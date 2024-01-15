@@ -44,12 +44,12 @@ $primary-font-size: 1.6rem;
 
 .page {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80vh;
   flex-direction: column;
+  align-items: center;
+  height: 100%;
   font-family: $primary-font;
   font-size: 1.6rem;
+  margin-top: 8rem;
   .header {
     margin-bottom: 1.2rem;
     font-size: 3.2rem;
@@ -79,27 +79,23 @@ $primary-font-size: 1.6rem;
   }
 }
 
-
-
-
-
-
-
-
 .resultPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 80vh;
+  height: 100%;
   font-family: $primary-font;
+  margin-top: 8rem;
   .resultPageHeader {
     display: flex;
     font-size: 3.2rem;
   }
   .resultPageContent {
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -107,7 +103,7 @@ $primary-font-size: 1.6rem;
 .foodCard {
   display: flex;
   flex-direction: column;
-  border: 0.1rem solid $primary-color;
+  border: 0.2rem solid $primary-color;
   border-radius: 2.4rem;
   height: 32rem;
   img {
@@ -116,6 +112,12 @@ $primary-font-size: 1.6rem;
     border-top-right-radius: 2.4rem;
     border-top-left-radius: 2.4rem;
     object-fit: cover;
+  }
+  .dishName {
+    font-family: sans-serif;
+    font-size: $primary-font-size;
+    margin-top: 1.2rem;
+    margin-left: 1.2rem;
   }
 }
 
