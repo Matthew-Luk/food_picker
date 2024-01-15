@@ -1,7 +1,13 @@
 import React from 'react';
 import '../scss/styles.scss';
-import friedEggs from '../images/fried_egg_and_rice.jpeg';
-import eggFriedRice from '../images/egg_fried_rice.jpeg';
+import friedEggs from '../images/friedeggandrice.jpeg';
+import eggFriedRice from '../images/eggfriedrice.jpeg';
+import eggSandwich from '../images/eggsandwich.jpeg';
+import carbonara from '../images/eggcarbonara.jpeg';
+import stirFriedMama from '../images/stirfriedmama.jpeg';
+import riceAndMeat from '../images/riceandmeat.jpeg';
+import spicyNoodlesEggs from '../images/spicynoodleseggs.jpeg';
+import baconRice from '../images/baconrice.jpeg';
 import bibigo from '../images/bibigo.jpeg';
 import { GiFriedEggs } from "react-icons/gi";
 import { BiBowlRice } from "react-icons/bi";
@@ -19,6 +25,30 @@ const EggsNoodles = (props) => {
     {
       imageSrc: eggFriedRice,
       name: "Egg fried rice",
+    },
+    {
+      imageSrc: eggSandwich,
+      name: "Fried egg sandwich",
+    },
+    {
+      imageSrc: baconRice,
+      name: "Bacon and rice",
+    },
+    {
+      imageSrc: carbonara,
+      name: "Lazy egg carbonara",
+    },
+    {
+      imageSrc: stirFriedMama,
+      name: "Stir fried mama with egg",
+    },
+    {
+      imageSrc: spicyNoodlesEggs,
+      name: "Spicy noodles with egg",
+    },
+    {
+      imageSrc: riceAndMeat,
+      name: "Rice and meat",
     }
   ]
 
@@ -45,7 +75,7 @@ const EggsNoodles = (props) => {
               eggMeals.map((item,index) => (
                 <div className='foodCard' key={index}>
                   <img src={item.imageSrc} alt="" />
-                  <p>{item.name}</p>
+                  <p className='dishName'>Name: {item.name}</p>
                 </div>
               ))
             }
@@ -62,7 +92,7 @@ const EggsNoodles = (props) => {
               frozenMeals.map((item,index) => (
                 <div className='foodCard' key={index}>
                   <img src={item.imageSrc} alt="" />
-                  <p>{item.name}</p>
+                  <p>Name: {item.name}</p>
                 </div>
               ))
             }
