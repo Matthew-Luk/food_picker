@@ -7,9 +7,7 @@ import { VscDebugRestart } from "react-icons/vsc";
 const Navbar = () => {
   const navigate = useNavigate()
 
-  const restartHandler = (e) => {
-    e.preventDefault()
-    console.log("Sending to home")
+  const restartHandler = () => {
     navigate('/home')
   }
 

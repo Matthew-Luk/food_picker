@@ -2,16 +2,17 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import '../scss/styles.scss'
 
-const Page3 = () => {
+const Page3 = (props) => {
+  const {setOrderOrSleep} = props
   const navigate = useNavigate()
 
-  const page2ClickYes = (e) => {
-
+  const page3ClickYes = () => {
+    setOrderOrSleep(true)
     navigate('/order_sleep')
   }
 
-  const page2ClickNo = (e) => {
-
+  const page3ClickNo = () => {
+    setOrderOrSleep(false)
     navigate('/order_sleep')
   }
 
@@ -21,10 +22,10 @@ const Page3 = () => {
         <p>Is it too late to order food?</p>
       </div>
       <div className='content'>
-        <div onClick={page2ClickYes} className='card'>
+        <div onClick={page3ClickYes} className='card'>
           <p className='blackFont'>YES</p>
         </div>
-        <div onClick={page2ClickNo} className='card'>
+        <div onClick={page3ClickNo} className='card'>
           <p className='blackFont'>NO</p>
         </div>
       </div>

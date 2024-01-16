@@ -9,7 +9,9 @@ import { useState } from 'react';
 import OrderSleep from './Components/OrderSleep';
 
 function App() {
-  const [ eggs, setEggs ] = useState("")
+  // const [foodAtHome, setFoodAtHome] = useState("")
+  const [eggsAndRice, setEggsAndRice] = useState("")
+  const [orderOrSleep, setOrderOrSleep] = useState("")
 
   return (
     <div className="App">
@@ -18,10 +20,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Navigate to='/home'/>}/>
           <Route path='/home' element={<Home/>}/>
-          <Route path='/page2' element={<Page2 setEggs={setEggs}/>}/>
-          <Route path='/page3' element={<Page3/>}/>
-          <Route path='/eggs_noodles' element={<EggsNoodles eggs={eggs}/>}/>
-          <Route path='/order_sleep' element={<OrderSleep/>}/>
+          <Route path='/page2' element={<Page2 setEggsAndRice={setEggsAndRice}/>}/>
+          <Route path='/page3' element={<Page3 setOrderOrSleep={setOrderOrSleep}/>}/>
+          <Route path='/eggs_noodles' element={<EggsNoodles eggsAndRice={eggsAndRice}/>}/>
+          <Route path='/order_sleep' element={<OrderSleep orderOrSleep={orderOrSleep}/>}/>
         </Routes>
       </BrowserRouter>
     </div>

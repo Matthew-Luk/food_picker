@@ -3,16 +3,16 @@ import { useNavigate } from 'react-router-dom'
 import '../scss/styles.scss'
 
 const Page2 = (props) => {
-  const { setEggs }= props
+  const {setEggsAndRice}= props
   const navigate = useNavigate()
 
   const page2ClickYes = (e) => {
-    setEggs(true)
+    setEggsAndRice(true)
     navigate('/eggs_noodles')
   }
 
   const page2ClickNo = (e) => {
-    setEggs(false)
+    setEggsAndRice(false)
     navigate('/eggs_noodles')
   }
 
