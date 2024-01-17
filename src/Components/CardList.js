@@ -43,7 +43,7 @@ const CardList = (props) => {
             <div className='foodCardContent'>
               <div className='dishName'>
                 <TiPencil color={'#bfd2c1'} size={"2.4rem"}/>
-                <p>Name: {item.name}</p>
+                {"name" in item ? <p>Name: {item.name}</p> : <p>Resaurant: {item.restaurantName}</p>}
               </div>
               <div className='dishCookTime'>
                 <IoTimeOutline color={'#bfd2c1'} size={"2.4rem"}/>

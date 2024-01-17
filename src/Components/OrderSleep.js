@@ -8,6 +8,9 @@ import porkChop from '../images/porkchopredrice.jpeg';
 import fireWings from '../images/firewings.jpeg';
 import torta from '../images/torta.jpeg';
 import churchsChicken from '../images/churchschicken.jpeg';
+import sleeping from '../images/sleeping.jpeg';
+import sleeping2 from '../images/sleeping2.jpeg';
+import sleeping3 from '../images/sleeping3.jpeg';
 import { ImSleepy } from "react-icons/im";
 import { GiNightSleep } from "react-icons/gi";
 import { MdOutlineTakeoutDining } from "react-icons/md";
@@ -19,51 +22,51 @@ const OrderSleep = (props) => {
   const restaurants = [
     {
       imageSrc: jollibee,
-      name: "Jollibee",
+      restaurantName: "Jollibee",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Rice", "Meat", "Fried"]
     },
     {
       imageSrc: bunRieu,
-      name: "Bun Rieu",
+      restaurantName: "Bun Rieu",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Noodles", "Meat", "Vegetable", ""]
     },
     {
       imageSrc: kapoon,
-      name: "Kapoon",
+      restaurantName: "Kapoon",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Noodles", "Meat", "Vegetable", ""]
     },
     {
       imageSrc: goldenDragon,
-      name: "Golden Dragon",
+      restaurantName: "Golden Dragon",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Noodles", "Meat", "Vegetable"]
     },
     {
       imageSrc: porkChop,
-      name: "Pork chop with red rice",
+      restaurantName: "Pork chop with red rice",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Rice", "Meat"]
     },
     {
       imageSrc: fireWings,
-      name: "Firewings",
+      restaurantName: "Firewings",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Meat", "Fried"]
     },
     {
       imageSrc: torta,
-      name: "Torta",
+      restaurantName: "Torta",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Sandwich", "Meat"]
     },
     {
       imageSrc: churchsChicken,
-      name: "Church's Chicken",
+      restaurantName: "Church's Chicken",
       distance: "5 miles",
-      attributes: [""]
+      attributes: ["Meat", "Fried"]
     },
   ]
 
@@ -78,8 +81,12 @@ const OrderSleep = (props) => {
           <p>Today we're having sleep.</p>
           <GiNightSleep color={'#bfd2c1'}/>
         </div>
-        <div className='resultPageContent'>
-
+        <div className='resultPageContent2'>
+          <img className='img1' src={sleeping} alt="" />
+          <div>
+            <img className='img2' src={sleeping2} alt="" />
+            <img className='img3' src={sleeping3} alt="" />
+          </div>
         </div>
       </div>
       :
