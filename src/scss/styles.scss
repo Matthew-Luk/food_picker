@@ -126,8 +126,13 @@ $secondary-margin-padding-br: 2.4rem;
   flex-direction: column;
   border: 0.2rem solid $primary-color;
   border-radius: $secondary-margin-padding-br;
-  height: 40rem;
+  // height: 40rem;
+  height: auto;
   width: 26rem;
+  transition: all 0.4s;
+  &:hover {
+    transform: scale(1.1);
+  }
   img {
     height: 20rem;
     width: inherit;

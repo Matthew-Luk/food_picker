@@ -33,7 +33,7 @@ const EggsNoodles = (props) => {
       imageSrc: friedEggs,
       name: "Fried egg and rice",
       cookTime: "5 min",
-      attributes: ["Egg", "Rice"]
+      attributes: ["Egg", "Rice", "Pan Fried"]
     },
     {
       imageSrc: eggFriedRice,
@@ -75,7 +75,7 @@ const EggsNoodles = (props) => {
       imageSrc: riceAndMeat,
       name: "Rice and meat",
       cookTime: "5 min",
-      attributes: ["Rice", "Meat", "Vegetable"]
+      attributes: ["Rice", "Meat", "Vegetable", "Pan Fried"]
     }
   ]
 
@@ -87,7 +87,7 @@ const EggsNoodles = (props) => {
       attributes: ["Dumplings", "Meat", "Microwave"]
     },
     {
-      imageSrc: buldakCarbonara,
+      imageSrc: buldakBlackBean,
       name: "Buldak black bean noodles",
       cookTime: "5 min",
       attributes: ["Noodles", "Spicy", "Boil"]
@@ -135,7 +135,7 @@ const EggsNoodles = (props) => {
       attributes: ["Noodles", "Spicy", "Boil"]
     },
     {
-      imageSrc: buldakBlackBean,
+      imageSrc: buldakCarbonara,
       name: "Buldak carbonara noodles",
       cookTime: "5 min",
       attributes: ["Noodles", "Spicy", "Boil"]
