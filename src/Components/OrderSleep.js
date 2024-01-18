@@ -23,49 +23,57 @@ const OrderSleep = (props) => {
     {
       imageSrc: jollibee,
       restaurantName: "Jollibee",
-      distance: "5 miles",
+      dish: "Spicy chicken meal with rice and gravy",
+      distance: "6 miles",
       attributes: ["Rice", "Meat", "Fried"]
     },
     {
       imageSrc: bunRieu,
-      restaurantName: "Bun Rieu",
-      distance: "5 miles",
-      attributes: ["Noodles", "Meat", "Vegetable", ""]
+      restaurantName: "Pho Xe Lua",
+      dish: "Bún riêu",
+      distance: "2 miles",
+      attributes: ["Noodles", "Meat", "Vegetable", "Seafood"]
     },
     {
       imageSrc: kapoon,
-      restaurantName: "Kapoon",
-      distance: "5 miles",
-      attributes: ["Noodles", "Meat", "Vegetable", ""]
+      restaurantName: "KB's Thai Hut",
+      dish: "Kapoon",
+      distance: "10 miles",
+      attributes: ["Noodles", "Meat", "Vegetable"]
     },
     {
       imageSrc: goldenDragon,
       restaurantName: "Golden Dragon",
-      distance: "5 miles",
+      dish: "Chow mein with salt and pepper wings",
+      distance: "2 miles",
       attributes: ["Noodles", "Meat", "Vegetable"]
     },
     {
       imageSrc: porkChop,
-      restaurantName: "Pork chop with red rice",
-      distance: "5 miles",
+      restaurantName: "Pho Viet 2",
+      dish: "Pork chop with red rice",
+      distance: "8 miles",
       attributes: ["Rice", "Meat"]
     },
     {
       imageSrc: fireWings,
       restaurantName: "Firewings",
-      distance: "5 miles",
+      dish: "8 piece combo with garlic noodles",
+      distance: "3 miles",
       attributes: ["Meat", "Fried"]
     },
     {
       imageSrc: torta,
-      restaurantName: "Torta",
-      distance: "5 miles",
+      restaurantName: "La Sabrocita",
+      dish: "Carne asada torta",
+      distance: "2 miles",
       attributes: ["Sandwich", "Meat"]
     },
     {
       imageSrc: churchsChicken,
       restaurantName: "Church's Chicken",
-      distance: "5 miles",
+      dish: "Spicy chicken combo with mac and cheese",
+      distance: "1 miles",
       attributes: ["Meat", "Fried"]
     },
   ]

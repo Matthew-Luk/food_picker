@@ -14,6 +14,9 @@ import { PiLeafLight } from "react-icons/pi";
 import { MdOutlineMicrowave } from "react-icons/md";
 import { GiDumpling } from "react-icons/gi";
 import { LuSandwich } from "react-icons/lu";
+import { IoFishOutline } from "react-icons/io5";
+import { TbBowl } from "react-icons/tb";
+
 
 const CardList = (props) => {
   const {list} = props
@@ -32,6 +35,7 @@ const CardList = (props) => {
     "Microwave": <MdOutlineMicrowave />,
     "Dumplings": <GiDumpling />,
     "Sandwich": <LuSandwich />,
+    "Seafood": <IoFishOutline />
   }
 
   return (
@@ -45,6 +49,16 @@ const CardList = (props) => {
                 <TiPencil color={'#bfd2c1'} size={"2.4rem"}/>
                 {"name" in item ? <p>Name: {item.name}</p> : <p>Resaurant: {item.restaurantName}</p>}
               </div>
+              {
+                "dish" in item 
+                ?
+                <div className='dishName'>
+                  <TbBowl color={'#bfd2c1'} size={"2.4rem"}/>
+                  <p>{item.dish}</p>
+                </div>
+                :
+                ""
+              }
               <div className='dishCookTime'>
                 <IoTimeOutline color={'#bfd2c1'} size={"2.4rem"}/>
                 {"cookTime" in item ? <p>Cook time: {item.cookTime}</p> : <p>Distance: {item.distance}</p>}
