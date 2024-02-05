@@ -22,11 +22,11 @@ const Page3 = (props) => {
         <p>Is it too late to order food?</p>
       </div>
       <div className='content'>
-        <div onClick={page3ClickYes} className='card'>
-          <p className='blackFont'>YES</p>
+        <div onClick={page3ClickYes} className='card night'>
+          <p>YES</p>
         </div>
-        <div onClick={page3ClickNo} className='card'>
-          <p className='blackFont'>NO</p>
+        <div onClick={page3ClickNo} className='card day'>
+          <p>NO</p>
         </div>
       </div>
     </div>
