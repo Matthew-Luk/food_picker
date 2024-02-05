@@ -15,6 +15,7 @@ import { ImSleepy } from "react-icons/im";
 import { GiNightSleep } from "react-icons/gi";
 import { MdOutlineTakeoutDining } from "react-icons/md";
 import { MdOutlineFoodBank } from "react-icons/md";
+import Random from './Random';
 
 const OrderSleep = (props) => {
   const {orderOrSleep} = props
@@ -29,7 +30,7 @@ const OrderSleep = (props) => {
     },
     {
       imageSrc: bunRieu,
-      restaurantName: "Pho Xe Lua",
+      restaurantName: "Phở Xe Lua",
       dish: "Bún riêu",
       distance: "2 miles",
       attributes: ["Noodles", "Meat", "Vegetable", "Seafood"]
@@ -37,7 +38,7 @@ const OrderSleep = (props) => {
     {
       imageSrc: kapoon,
       restaurantName: "KB's Thai Hut",
-      dish: "Kapoon",
+      dish: "Khao poon",
       distance: "10 miles",
       attributes: ["Noodles", "Meat", "Vegetable"]
     },
@@ -50,7 +51,7 @@ const OrderSleep = (props) => {
     },
     {
       imageSrc: porkChop,
-      restaurantName: "Pho Viet 2",
+      restaurantName: "Phở Viet 2",
       dish: "Pork chop with red rice",
       distance: "8 miles",
       attributes: ["Rice", "Meat"]
@@ -60,7 +61,7 @@ const OrderSleep = (props) => {
       restaurantName: "Firewings",
       dish: "8 piece combo with garlic noodles",
       distance: "3 miles",
-      attributes: ["Meat", "Fried"]
+      attributes: ["Meat", "Noodles", "Fried"]
     },
     {
       imageSrc: torta,
@@ -104,6 +105,7 @@ const OrderSleep = (props) => {
           <p>Today we're ordering takeout.</p>
           <MdOutlineFoodBank color={'#bfd2c1'}/>
         </div>
+        <Random list={restaurants}/>
         <CardList list={restaurants}/>
       </div>
       }

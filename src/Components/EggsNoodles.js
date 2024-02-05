@@ -24,6 +24,7 @@ import { GiFriedEggs } from "react-icons/gi";
 import { BiBowlRice } from "react-icons/bi";
 import { CiBowlNoodles } from "react-icons/ci";
 import { LuMicrowave } from "react-icons/lu";
+import Random from './Random';
 
 const EggsNoodles = (props) => {
   const {eggsAndRice} = props
@@ -165,6 +166,7 @@ const EggsNoodles = (props) => {
           <LuMicrowave color={'#bfd2c1'}/>
         </div>
       }
+      <Random list={eggsAndRice ? eggMeals : frozenMeals}/>
       <CardList list={eggsAndRice ? eggMeals : frozenMeals}/>
     </div>
   )
