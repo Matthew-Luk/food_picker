@@ -55,41 +55,44 @@ const Random = (props) => {
 
   return (
     <div className='random'>
-      <button onClick={selectRandomNumber}>Pick for me</button>
+      <button onClick={selectRandomNumber}>Pick for me!</button>
       {
         randomSelected
         ?
-        <div className='foodCard'>
-        <img src={list[randInt].imageSrc} alt="" />
-          <div className='foodCardContent'>
-            <div className='dishName'>
-              <TiPencil color={'#bfd2c1'} size={"2.4rem"}/>
-              {"name" in list[randInt] ? <p>Name: {list[randInt].name}</p> : <p>Resaurant: {list[randInt].restaurantName}</p>}
-            </div>
-            {
-              "dish" in list[randInt] 
-              ?
+        <div className='randomSelection'>
+          <p>Random selection:</p>
+          <div className='foodCard'>
+            <img src={list[randInt].imageSrc} alt="" />
+            <div className='foodCardContent'>
               <div className='dishName'>
-                <TbBowl color={'#bfd2c1'} size={"2.4rem"}/>
-                <p>{list[randInt].dish}</p>
+                <TiPencil color={'#bfd2c1'} size={"2.4rem"}/>
+                {"name" in list[randInt] ? <p>Name: {list[randInt].name}</p> : <p>Resaurant: {list[randInt].restaurantName}</p>}
               </div>
-              :
-              ""
-            }
-            <div className='dishCookTime'>
-              <IoTimeOutline color={'#bfd2c1'} size={"2.4rem"}/>
-              {"cookTime" in list[randInt] ? <p>Cook time: {list[randInt].cookTime}</p> : <p>Distance: {list[randInt].distance}</p>}
-            </div>
-            <div className='attributeList'>
-              <IoMdPricetags color={'#bfd2c1'} size={"2.4rem"}/>
               {
-                list[randInt].attributes.map((attribute,index) => (
-                  <div className='attribute' key={index}>
-                    {icons[`${attribute}`]} 
-                    <p>{attribute}</p>
-                  </div>
-                ))
+                "dish" in list[randInt] 
+                ?
+                <div className='dishName'>
+                  <TbBowl color={'#bfd2c1'} size={"2.4rem"}/>
+                  <p>{list[randInt].dish}</p>
+                </div>
+                :
+                ""
               }
+              <div className='dishCookTime'>
+                <IoTimeOutline color={'#bfd2c1'} size={"2.4rem"}/>
+                {"cookTime" in list[randInt] ? <p>Cook time: {list[randInt].cookTime}</p> : <p>Distance: {list[randInt].distance}</p>}
+              </div>
+              <div className='attributeList'>
+                <IoMdPricetags color={'#bfd2c1'} size={"2.4rem"}/>
+                {
+                  list[randInt].attributes.map((attribute,index) => (
+                    <div className='attribute' key={index}>
+                      {icons[`${attribute}`]} 
+                      <p>{attribute}</p>
+                    </div>
+                  ))
+                }
+              </div>
             </div>
           </div>
         </div>

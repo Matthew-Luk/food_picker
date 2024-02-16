@@ -6,7 +6,7 @@
 /* - SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
 
-$primary-font: "PT Serif";
+$primary-font: sans-serif;
 $primary-color: #bfd2c1;
 $secondary-color: #fff;
 $primary-font-size: 1.6rem;
@@ -33,11 +33,21 @@ $secondary-margin-padding-br: 2.4rem;
   }
   button {
     height: 3.2rem;
-    width: 8rem;
+    width: 9rem;
     margin: 0 2.4rem 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: $secondary-color;
+    border-radius: $primary-margin-padding-br;
+    border: none;
+    cursor: pointer;
+    border: 0.1rem solid $secondary-color;
+    color: black;
+    &:hover {
+      transition: 0.5s all;
+      border: 0.1rem solid black;
+    }
   }
 }
 
@@ -46,11 +56,12 @@ $secondary-margin-padding-br: 2.4rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  height: 100%;
+  margin-top: 8rem;
   font-family: $primary-font;
   font-size: 1.6rem;
   .header {
-    margin-bottom: $primary-margin-padding-br;
+    margin-bottom: 3.2rem;
     font-size: 3.2rem;
   }
   .content {
@@ -68,6 +79,7 @@ $secondary-margin-padding-br: 2.4rem;
       color: $secondary-color;
       background-size: cover;
       background-repeat: no-repeat;
+      background-position: center;
       opacity: 0.75;
       transition: all 0.4s;
       &:hover {
@@ -86,6 +98,7 @@ $secondary-margin-padding-br: 2.4rem;
   height: 100%;
   font-family: $primary-font;
   margin-top: 8rem;
+  padding-bottom: 4.8rem;
   .resultPageHeader {
     display: flex;
     align-items: center;
@@ -145,7 +158,7 @@ $secondary-margin-padding-br: 2.4rem;
     flex-direction: column;
     padding: $primary-margin-padding-br;
     font-size: $primary-font-size;
-    font-family: sans-serif;
+    font-family: $primary-font;
     gap: $primary-margin-padding-br;
     border-top: 0.2rem solid $primary-color;
     .dishName, .dishCookTime {
@@ -185,11 +198,32 @@ $secondary-margin-padding-br: 2.4rem;
   align-items: center;
   margin-bottom: 3.2rem;
   button {
-    height: 3.2rem;
-    width: 8rem;
+    height: 4rem;
+    width: 9rem;
     display: flex;
     align-items: center;
+    margin-bottom: 2.4rem;
     justify-content: center;
+    background-color: $secondary-color;
+    border-radius: $primary-margin-padding-br;
+    border: none;
+    cursor: pointer;
+    border: 0.1rem solid $primary-color;
+    font-weight: 600;
+    color: black;
+    &:hover {
+      transition: 0.5s all;
+      border: 0.1rem solid black;
+    }
+  }
+}
+
+.randomSelection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    font-size: $primary-font-size;
   }
 }
 
@@ -233,4 +267,111 @@ $secondary-margin-padding-br: 2.4rem;
   80% { transform: translate(-0.1rem, -0.1rem) rotate(1deg); }
   90% { transform: translate(0.1rem, 0.2rem) rotate(0deg); }
   100% { transform: translate(0.1rem, -0.2rem) rotate(-1deg); }
+}
+
+// 941px
+@media (max-width: 58.8125em) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resultPage {
+    .resultPageContent {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+// 815px
+@media (max-width: 50.9375em) {
+  .resultPage {
+    .resultPageContent2 {
+      gap: 3.2rem;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.2rem;
+      }
+    }
+  }
+}
+
+// 620px
+@media (max-width: 38.75em) {
+  .resultPage {
+    .resultPageContent {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .resultPageContent2 {
+      .img1 {
+        width: 90%;
+      }
+    }
+  }
+}
+
+// 500px
+@media (max-width: 31.25em) {
+  .navbar{
+    .navbarLeft {
+      p {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  .resultPage {
+    .resultPageContent2 {
+      .img3 {
+        width: 90%;
+      }
+    }
+  }
+}
+
+// 468px
+@media (max-width: 29.25em) {
+  .page {
+    .header {
+      font-size: 2.4rem;
+    }
+    .content {
+      width: 100%;
+      .card {
+        width: 80%;
+        height: 20rem;
+      }
+    }
+  }
+
+  .resultPage {
+    .resultPageHeader {
+      font-size: 2.4rem;
+    }
+  }
+}
+
+// 420px
+@media (max-width: 26.25em){
+  .navbar {
+    .navbarLeft {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  .page {
+    .header {
+      font-size: 1.8rem;
+    }
+  }
+
+  .resultPage {
+    .resultPageHeader {
+      font-size: 1.8rem;
+    }
+  }
 }
